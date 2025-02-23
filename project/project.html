@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Mental Health Journal for Teens by Alessandro Romero for Mind4Youth Final Project</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Virtual Mental Health Journal for Teens</h1>
+        <p>by Alessandro Romero for Mind4Youth Final Project</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#prompts">Daily Prompts</a></li>
+            <li><a href="#mood">Mood Tracker</a></li>
+            <li><a href="#goals">Goal Setting</a></li>
+            <li><a href="#affirmations">Positive Affirmations</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
+
+    <!-- Daily Journal Prompts Section -->
+    <section id="prompts">
+        <h2>Today's Journal Prompt</h2>
+        <p id="journal-prompt">How are you feeling today?</p>
+        <button onclick="loadNewPrompt()">Get New Prompt</button>
+        <textarea id="journal-entry" placeholder="Write your thoughts here..."></textarea>
+        <button onclick="saveJournal()">Save Journal</button>
+        <h3>Your Previous Entries:</h3>
+        <div id="previous-journals"></div>
+    </section>
+
+    <!-- Mood Tracker Section -->
+    <section id="mood">
+        <h2>Mood Tracker</h2>
+        <p>Select your mood today:</p>
+        <div id="mood-selector">
+            <button onclick="setMood('😊')">😊</button>
+            <button onclick="setMood('😐')">😐</button>
+            <button onclick="setMood('😔')">😔</button>
+        </div>
+        <p>Your selected mood: <span id="mood-display">😊</span></p>
+    </section>
+
+    <!-- Goal Setting Section -->
+    <section id="goals">
+        <h2>Set Your Mental Wellness Goals</h2>
+        <input type="text" id="goal-input" placeholder="Enter your wellness goal">
+        <button onclick="saveGoal()">Save Goal</button>
+        <ul id="goal-list"></ul>
+    </section>
+
+    <!-- Positive Affirmations Section -->
+    <section id="affirmations">
+        <h2>Daily Affirmations</h2>
+        <p id="affirmation-text">"You are amazing!"</p>
+        <button onclick="getNewAffirmation()">Get New Affirmation</button>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+        <h2>Contact & Resources</h2>
+        <p>If you need help, reach out to a counselor or mental health professional. Here are some resources:</p>
+        <ul>
+            <li><a href="https://www.mentalhealth.gov/" target="_blank">MentalHealth.gov</a></li>
+            <li><a href="https://www.samhsa.gov/find-help" target="_blank">SAMHSA Helpline</a></li>
+            <li><a href="https://www.crisistextline.org/" target="_blank">Crisis Text Line</a></li>
+        </ul>
+    </section>
+
+    <script src="project.js"></script>
+</body>
+</html>
